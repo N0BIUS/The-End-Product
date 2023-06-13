@@ -360,8 +360,13 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
-"Assets/Scenes/mapmove.cs"
-"Assets/Scenes/Player_Movement.cs"
+"Assets/Scripts/ButtonScripts.cs"
+"Assets/Scripts/CloudMove.cs"
+"Assets/Scripts/enmove.cs"
+"Assets/Scripts/mapmove.cs"
+"Assets/Scripts/Player_Movement.cs"
+"Assets/Scripts/ScoreManager.cs"
+"Assets/Scripts/ShowScore.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0
 
