@@ -9,6 +9,8 @@ public class ButtonScripts : MonoBehaviour
     public void GameStart() 
     {
         SceneManager.LoadScene("Runner");
+        ScoreManager.score = 0f;
+        ScoreManager.gold = 0;
     }
 
     public void ScoreSC()

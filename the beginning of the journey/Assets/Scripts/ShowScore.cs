@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -26,7 +27,16 @@ public class ShowScore : MonoBehaviour
     {
 
         scoremas = Data.scores();
+        Array.Sort(scoremas);
+        Array.Reverse(scoremas);
         text.text = getrecords(scoremas);
+    }
+
+    public void delete() 
+    {
+        PlayerPrefs.DeleteAll();
+        showrerecords();
+
     }
 
 }

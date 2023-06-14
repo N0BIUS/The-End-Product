@@ -8,6 +8,7 @@ public class ScoreManager : MonoBehaviour
 {
     public TextMeshProUGUI T;
     public static float score;
+    public static int gold;
 
     public static bool alive;
 
@@ -20,7 +21,7 @@ public class ScoreManager : MonoBehaviour
         if (alive)
         {
             score += 1 * Time.deltaTime;
-            T.text = "ќчки: " + ((int)score).ToString();
+            T.text = "ќчки: " + ((int)score).ToString()+"\n«олотые €блоки: "+gold;
         }
     }
 
@@ -28,10 +29,10 @@ public class ScoreManager : MonoBehaviour
 [System.Serializable]
 public class Data 
 {
-    public static int scorenum = PlayerPrefs.GetInt("scornum");
+    public static int scorenum ;
     public static int[] scores()
     {
-
+        scorenum = PlayerPrefs.GetInt("scorenum");
         int[] scores = new int[scorenum];
         for (int i = 0; i < scores.Length; i++)
         {
@@ -42,9 +43,7 @@ public class Data
     }
     public static void SaveSC()
     {
-
-        PlayerPrefs.SetInt("scorenum",scorenum );
-
+        scorenum = PlayerPrefs.GetInt("scorenum");
         PlayerPrefs.SetInt("score_" + scorenum, (int)ScoreManager.score);
         PlayerPrefs.Save();
     }
